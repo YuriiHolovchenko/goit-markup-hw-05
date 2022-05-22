@@ -90,17 +90,20 @@ body {
 }
 
 /* меню навігатора */
-.navigator-list{
+.navigator .list{
     display: flex;
     align-items: center;
 }
-.navigator-item {
+.navigator .item {
     margin-right: 50px;
 }
-.navigator-item:last-child{
+.navigator .item:last-child{
     margin: 0;
 }
-.navigator-link {
+.item-current {
+    position: relative;
+}
+.navigator .link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -112,10 +115,21 @@ body {
     letter-spacing: 0.02em;
     text-decoration: none;
 }
-.navigator-link:hover,
-.navigator-link:focus,
-.current {
+.navigator .link:hover,
+.navigator .link:focus,
+.navigator .current {
     color: var(--accent-color);
+}
+.navigator .current::after {
+    content: "";
+    position: absolute;
+    bottom:0%;
+    left:0%;
+    
+    width: 100%;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
 }
 
 /* контакти */
