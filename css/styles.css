@@ -222,7 +222,6 @@ body {
 /* - - - - - - - - - -  */
 /*    Модальне вікно    */
 /* - - - -- - - - - - - */
-/* .backdrop:fixed {*/
 
 .backdrop {
     position: fixed;
@@ -233,7 +232,8 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 
     opacity: 1;
-    transition: opasity 250ms var(--timing-function);
+    transition: opasity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
 }
 .backdrop.is-hidden{
     opacity: 0;
@@ -272,9 +272,6 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: transparent;
 }
-/* .modbtn{
-    fill: var(--primary-text-color);
-} */
 
 /* Назви секцій  */
 .section-title {
@@ -659,7 +656,8 @@ color: var(--primary-text-color);
     transform: translateY(101%);
     transition: transform 250ms var(--timing-function);
 }
-.portfolio .card:hover .card-overlay {
+.portfolio .card:hover .card-overlay,
+.portfolio .card:focus .card-overlay {
     transform: translateY(0);
 }
 .blue-text{
@@ -680,7 +678,8 @@ color: var(--primary-text-color);
     text-decoration: none;
     transition: box-shadow 250ms var(--timing-function);
 }
-.portfolio .card:hover{
+.portfolio .card:hover,
+.portfolio .card:focus{
     display: block;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
