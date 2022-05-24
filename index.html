@@ -30,13 +30,14 @@
         <a href="./index.html" class="logo">Web<span class="logo-black">Studio</span> </a>
         <nav class="navigator">
           <ul class="list">
-            <li class="item item-current">
+            <li class="item">
               <a class="link current" href="./index.html">Студия</a>
             </li>
             <li class="item">
               <a class="link" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="item"><a class="link" href="#contacts">Контакты</a></li>
+            <li class="item">
+              <a class="link" href="#contacts">Контакты</a></li>
           </ul>
         </nav>
         <ul class="list contacts-list">
@@ -64,7 +65,19 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-btn" type="button" name="order">Заказать услугу</button>
+          <button class="hero-btn" type="button" name="order" data-modal-open>
+            Заказать услугу
+          </button>
+          <div class="backdrop" data-modal>
+            <div class="modal">
+              <button class="modal-btn" data-modal-close>
+                <svg class="modbtn" width="11px" height="11px">
+                  <use href="./images/sprite.svg#icon-vector"></use>
+                </svg>
+              </button>
+            </div>
+            <!-- <div class="modal-form"></div> -->
+          </div>
         </div>
       </section>
       <!-- Секція "переваги" (назва секції прихована)-->
@@ -125,12 +138,17 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list work grid">
             <li class="grid-item">
-              <img src="./images/work/img1.jpg" alt="Web development" width="370" />
+              <img class="pic" src="./images/work/img1.jpg" alt="Web development" width="370" />
+              <p class="title">десктопные приложения</p>
             </li>
             <li class="grid-item">
               <img src="./images/work/img2.jpg" alt="Mobile applications" width="370" />
+              <p class="title">мобильные приложения</p>
             </li>
-            <li class="grid-item"><img src="./images/work/img3.jpg" alt="Design" width="370" /></li>
+            <li class="grid-item">
+              <img src="./images/work/img3.jpg" alt="Design" width="370" />
+              <p class="title">дизайнерские решения</p>
+            </li>
           </ul>
         </div>
       </section>
@@ -521,5 +539,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
